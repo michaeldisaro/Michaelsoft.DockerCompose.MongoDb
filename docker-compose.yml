@@ -1,0 +1,13 @@
+version: '3'
+services:
+  database:
+    image: 'mongo'
+    container_name: ${MONGO_CONTAINER_NAME}
+    environment:
+      - MONGO_INITDB_DATABASE
+      - MONGO_INITDB_ROOT_USERNAME
+      - MONGO_INITDB_ROOT_PASSWORD
+    volumes:
+      - ./init-mongo.js:/docker-entrypoint-initdb.d/init-mongo.js:ro
+      - /${MONGO_CONTAINER_NAME}/data:/data/db
+      - /${MONGO_CONTAINER_NAME}/tmp:/tmp
