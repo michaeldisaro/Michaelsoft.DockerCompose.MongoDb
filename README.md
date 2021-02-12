@@ -4,7 +4,9 @@ These scripts compose and run a secure mongodb container.
 
 1. Clone into the machine that has docker installed.
 
-2. Create a .vars file with LF endline and UTF8 encoding with the following content:
+2. Run *chmod +x run.sh destroy.sh source-vars.sh .vars docker-compose.yml* to make file executable.
+
+3. Create a .vars file with LF endline and UTF8 encoding with the following content:
 
 ```
 export MONGO_CONTAINER_NAME="your mongo container name"
@@ -16,7 +18,7 @@ export MONGO_INITDB_DATABASE_USER_PASSWORD="your database password"
 export MONGO_INITDB_DATABASE_USER_ROLES="your database mongodb role"
 ```
 
-3. Run *./run.sh* to run the container
+4. Run *sudo ./run.sh* to compose and run the container.
 
 # Notes
 
