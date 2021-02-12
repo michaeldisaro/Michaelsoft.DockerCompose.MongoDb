@@ -20,9 +20,9 @@ export MONGO_INITDB_DATABASE_USER_ROLES="your database mongodb role"
 
 # Notes
 
-Data is persisted on host by mounting */<your mongo container name>/data* to the container for data persistence.
+Data is persisted on host by mounting */\<your mongo container name\>/data* to the container for data persistence.
 
-You can connect only on unix socket at path */<your mongo container name>/tmp/mongodb-27017.sock*.
+You can connect only on unix socket at path */\<your mongo container name\>/tmp/mongodb-27017.sock*.
 
 If you need to bind ports, uncomment ports section on *docker-compose.yml*.
 
